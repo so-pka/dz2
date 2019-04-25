@@ -14,15 +14,16 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'DI0Lar3B0Ncr3dY7mGvX3Zy3BuAKVwDn',
+            'cookieValidationKey' => 'y2_eAsCTiyGPfb08DTb0ZbmfBOGLgk9Z',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+                'identityClass' => app\models\UserIdentity::class,
+                'enableAutoLogin' => true,
         ],
+
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],

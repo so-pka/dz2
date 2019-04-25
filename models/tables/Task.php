@@ -14,8 +14,6 @@ use Yii;
  * @property int $responsible_id
  * @property string $deadline
  * @property int $status_id
- *
- * @property Test $status
  */
 class Task extends \yii\db\ActiveRecord
 {
@@ -54,10 +52,5 @@ class Task extends \yii\db\ActiveRecord
             'deadline' => 'Deadline',
             'status_id' => 'Status ID',
         ];
-    }
-
-    public function getStatus()
-    {
-        return $this->hasOne(Test::class, ['id' => 'status_id']);
     }
 }
